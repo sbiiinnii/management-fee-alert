@@ -39,6 +39,7 @@ if echo "$RESPONSE" | grep -q '"ok":true'; then
     echo "텔레그램 전송 성공"
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] 텔레그램 전송 성공" >> "$LOG_FILE"
 else
-    echo "텔레그램 전송 실패"    echo "[$date '+%Y-%m-%d %H:%M:%S')] 텔레그램 전송 실패: $RESPONSE" >> "$LOG_FILE"
+    echo "텔레그램 전송 실패"
+    echo "[$date '+%Y-%m-%d %H:%M:%S')] 텔레그램 전송 실패: $RESPONSE" >> "$LOG_FILE"
     exit 1
 fi
